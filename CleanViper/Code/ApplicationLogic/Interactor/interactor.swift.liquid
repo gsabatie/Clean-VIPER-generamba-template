@@ -1,0 +1,27 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+class {{ module_info.name }}Interactor {
+ 
+    // MARK: Dependency inversion variable 
+    weak var output: {{ module_info.name }}InteractorOutputProtocol?
+
+    // MARK: Instance Variable
+
+    // MARK: Constructors
+    init(output: {{ module_info.name }}InteractorOutputProtocol? = nil) {
+        self.output = output
+    }
+}
+
+// MARK: {{ module_info.name }}UseCaseProtocol
+extension {{ module_info.name }}Interactor: {{ module_info.name }}UseCaseProtocol {
+
+}
