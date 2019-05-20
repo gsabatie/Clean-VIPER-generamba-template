@@ -1,0 +1,37 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import XCTest
+import Quick
+import Nimble
+import SwiftyMocky
+
+@testable import {{ module_info.product_module_name }}
+
+final class {{ module_info.name }}ViewControllerSpecs: QuickSpec {
+
+    var viewController: {{ module_info.name }}ViewController!
+    var presenter: {{ module_info.name }}ViewEventResponderProtocolMock!
+
+    override func spec() {
+    
+    }
+}
+
+extension {{ module_info.name }}ViewController {
+    static func forTest(presenterMock: inout {{ module_info.name }}ViewEventResponderProtocol) -> {{ module_info.name }}ViewController  {
+           let viewController = {{ module_info.name }}ViewController()
+           viewController.output = presenterMock
+       
+           return viewController
+    }
+}
+
+fileprivate extension {{ module_info.name }}ViewEventResponderProtocolMock {
+
+}

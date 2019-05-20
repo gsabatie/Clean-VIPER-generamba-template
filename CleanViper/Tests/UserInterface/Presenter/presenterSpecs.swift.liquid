@@ -1,0 +1,49 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import XCTest
+import Quick
+import Nimble
+import SwiftyMocky
+
+@testable import {{ module_info.product_module_name }}
+
+
+final class {{ module_info.name }}PresenterSpecs: QuickSpec {
+
+    var presenter: {{ module_info.name }}Presenter!
+    var interactorMock: {{ module_info.name }}UseCaseProtocolMock!
+    var viewMock: {{ module_info.name }}ViewProtocolMock!
+    var router: {{ module_info.name }}RouterProtocolMock!
+
+    override func spec() {
+    
+    }
+}
+
+extension {{ module_info.name }}Presenter {
+    static func forTest(interactorMock: inout {{ module_info.name }}UseCaseProtocol!
+                         routerMock: {{ module_info.name }}RouterProtocol?,
+                         viewMock: {{ module_info.name }}ViewProtocol?) -> {{ module_info.name }}Presenter {
+       let presenter = {{ module_info.name }}Presenter(interactor: interactorMock, router: routerMock, view: viewMock)
+       
+       return interactor
+    }
+}
+
+fileprivate extension {{ module_info.name }}UseCaseProtocolMock {
+
+}
+
+fileprivate extension {{ module_info.name }}ViewProtocolMock {
+    
+}
+
+fileprivate extension {{ module_info.name }}RouterProtocolMock {
+    
+}
