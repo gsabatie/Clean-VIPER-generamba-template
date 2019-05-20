@@ -8,26 +8,32 @@
 
 import UIKit
 
+//sourcery: AutoMockable
 protocol {{ module_info.name }}ViewProtocol: class{
 
 }
 
+//sourcery: AutoMockable
 protocol {{ module_info.name }}ViewEventResponderProtocol {
     func viewDidLoad()
 }
 
+//sourcery: AutoMockable
 protocol {{ module_info.name }}PresentationProtocol: class {
 
 }
 
+//sourcery: AutoMockable
 protocol {{ module_info.name }}UseCaseProtocol: class {
 
 }
 
+//sourcery: AutoMockable
 protocol {{ module_info.name }}InteractorOutputProtocol: class {
 
 }
 
+//sourcery: AutoMockable
 protocol {{ module_info.name }}RouterProtocol: class {
     func present(from viewController:UIViewController)
 }
