@@ -2,7 +2,7 @@
 name: "CleanViper"
 summary: "Swift VIPER module template with Configurator"
 author: "Guillaume Sabatie"
-version: "0.1.0"
+version: "1.0.0"
 license: "MIT"
 
 # The declarations for code files
@@ -30,17 +30,14 @@ code_files:
 # The declarations for test files
 test_files:
 
-# Configurators tests
-- {name: Configurator/ConfiguratorTests.swift, path: Tests/Configurator/configurator_tests.swift.liquid}
+# View layer test
+- {name: User Interface/View/viewcontrollerSpecs.swift, path: Tests/UserInterface/View/viewcontrollerSpecs.swift.liquid}
 
-# View tests
-- {name: View/ViewTests.swift, path: Tests/View/view_tests.swift.liquid}
+# Presenter layer
+- {name: User Interface/Presenter/PresenterSpecs.swift, path: Tests/UserInterface/Presenter/presenterSpecs.swift.liquid}
 
-# Interactor tests
-- {name: Interactor/InteractorTests.swift, path: Tests/Interactor/interactor_tests.swift.liquid}
+# Interactor layer
+- {name: Application Logic/Interactor/InteractorSpecs.swift, path: Tests/ApplicationLogic/Interactor/interactorSpecs.swift.liquid}
 
-# Presenter tests
-- {name: Presenter/PresenterTests.swift, path: Tests/Presenter/presenter_tests.swift.liquid}
-
-# Router tests
-- {name: Router/RouterTests.swift, path: Tests/Router/router_tests.swift.liquid}
+# Router layer
+- {name: User Interface/Router/RouterSpecs.swift, path: Tests/UserInterface/Router/routerSpecs.swift.liquid}
