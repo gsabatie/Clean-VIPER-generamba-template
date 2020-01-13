@@ -10,6 +10,24 @@ import UIKit
 
 final class {{ module_info.name }}ModuleConfigurator {
 
+    static func initializePresenter() -> {{ module_info.name }}Presenter {
+          var view: {{ module_info.name }}ViewProtocol!
+
+          let router ={{ module_info.name }}Router()
+          if #available(iOS 13.0.0, *) {
+              view = {{ module_info.name }}View()
+          } else {
+              view =  {{ module_info.name }}ViewController()
+          }
+        
+          let presenter = {{ module_info.name }}Presenter(router: router, view: view)
+          let interactor = {{ module_info.name }}Interactor(output:presenter)
+
+          presenter.interactor = interactor
+          view.output = presenter
+          return presenter
+    }
+
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
         if let viewController = viewInput as? {{ module_info.name }}ViewController {
