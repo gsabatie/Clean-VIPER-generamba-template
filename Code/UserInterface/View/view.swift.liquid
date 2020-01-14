@@ -10,10 +10,10 @@
 import SwiftUI
 
 @available(iOS 13.0.0, *)
-final class { module_info.name }}View: View {
+final class {{ module_info.name }}View: View {
 
    // MARK: Dependency inversion variable 
-   var output: { module_info.name }}ViewEventResponderProtocol?
+   var output: {{ module_info.name }}ViewEventResponderProtocol?
 
    // MARK: Instance variable
 
@@ -24,17 +24,17 @@ final class { module_info.name }}View: View {
 
 // MARK: MeSwiftViewProtocol
 @available(iOS 13.0.0, *)
-extension { module_info.name }}View: { module_info.name }}ViewProtocol {
+extension {{ module_info.name }}View: {{ module_info.name }}ViewProtocol {
 
 }
 
 
 #if DEBUG
 @available(iOS 13.0.0, *)
-struct { module_info.name }}View_Previews: PreviewProvider {
+struct {{ module_info.name }}View_Previews: PreviewProvider {
    static var previews: some View {
        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
-           { module_info.name }}View()
+           {{ module_info.name }}View()
                .previewDevice(PreviewDevice(rawValue: deviceName))
                .previewDisplayName(deviceName)
        }

@@ -13,7 +13,7 @@ final class {{ module_info.name }}ModuleConfigurator {
     static func initializePresenter() -> {{ module_info.name }}Presenter {
           var view: {{ module_info.name }}ViewProtocol!
 
-          let router ={{ module_info.name }}Router()
+          let router = {{ module_info.name }}Router()
           if #available(iOS 13.0.0, *) {
               view = {{ module_info.name }}View()
           } else {
